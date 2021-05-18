@@ -1,0 +1,142 @@
+<html>
+<style>
+  
+  /* modify first page */
+  .phb:first-of-type { text-align:center; }
+  .phb:first-of-type:after { display:none; }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url("") }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb blockquote {background-color: #f6e5d4}
+  .phb hr + blockquote tr:nth-child(odd) td {background-color: #FDF1DC;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+.phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+.phb .footnote {color: rgba(0, 0, 0, 0.5)}
+.phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : 0px;
+    left             : 0px;
+    z-index          : -10;
+  	height           : 75px;
+    width            : 100%;
+    background-image : url('https://i.imgur.com/TMwD0N6.png');
+    background-size  : cover;
+  	mix-blend-mode:multiply;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : 0px;
+    left             : 0px;
+    z-index          : -10;
+    height           : 75px;
+    width            : 100%;
+    background-image : url('https://i.imgur.com/TMwD0N6.png');
+    background-size  : cover;
+  	mix-blend-mode:multiply;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+
+
+<!-- Bottom image goes first to begin layering process. -->
+<img 
+  src='https://i.imgur.com/PEYjYVB.png' 
+  style='position:absolute; top:-80px; left:0px; width:100%' />
+ 
+<!-- D[dice]D logo, adding multiple for a deeper shading -->
+<img src='http://i.imgur.com/S8hUThq.png' style='position:absolute;top:20px;left:350px;width:130px;'/>
+<img src='http://i.imgur.com/S8hUThq.png' style='position:absolute;top:20px;left:350px;width:130px;'/>
+<img src='http://i.imgur.com/S8hUThq.png' style='position:absolute;top:20px;left:350px;width:130px;'/>
+
+<!-- title text -->
+<div style='position:absolute;
+font-weight:normal;
+font-size:36px;
+color:white;
+text-shadow: 2px 2px 5px #000000,-2px 2px 5px #000000,2px -2px 5px #000000,-2px -2px 5px #000000;
+transform: scale(1.7, 1.7);
+top:105px;
+width:700px;'>THE COMPENDIUM</div>
+
+<!-- title text cont. -->
+<div style='position:absolute;
+font-weight:normal;
+font-size:36px;
+color:white;
+text-shadow: 2px 2px 5px #000000,-2px 2px 5px #000000,2px -2px 5px #000000,-2px -2px 5px #000000;
+transform: scale(1.7, 1.7);
+top:165px;
+width:700px;'>OF EVERYTHING</div>
+
+<!-- title diamond -->
+<img src='http://i.imgur.com/SGYtcP2.png'
+style='position:absolute;width:45%;height:3.2%;left:230px;top:195px;'
+/>
+
+<!-- D[Dice]D flag, adding multiple times for deeper shading -->
+<img src='http://i.imgur.com/Sa6Nmjx.png' style='position:absolute;left:-10px;bottom:145px;width:430px' />
+<img src='http://i.imgur.com/Sa6Nmjx.png' style='position:absolute;left:-10px;bottom:145px;width:430px' />
+
+<!-- footer text -->
+<div style='position:absolute;
+font-family:"nodesto", nodesto, sans-serif;
+font-weight:bold;
+font-size:20px;
+color:white;
+bottom:60px;
+right:55px;
+width:700px;
+text-shadow: 1px 1px 2px #000000,-1px 1px 2px #000000,1px -1px 2px #000000,-1px -1px 2px #000000;
+filter:opacity(100%)'>A concise collection of new rules options</div>
+
+<div style='position:absolute;
+font-family:"nodesto", nodesto, sans-serif;
+font-weight:bold;
+font-size:20px;
+color:white;
+bottom:30px;
+right:55px;
+width:700px;
+text-shadow: 1px 1px 2px #000000,-1px 1px 2px #000000,1px -1px 2px #000000,-1px -1px 2px #000000;
+filter:opacity(100%)'>for the world's greatest roleplaying game</div>
+</html>
