@@ -1,15 +1,23 @@
 # Docker
-## Differences between containerisation and virtualisation
-
 ## What is Docker?
 
 ## What are the benefits of Docker?
+
+## Differences between containerisation and virtualisation
+
+## Kubernetes K8
+### What is Kubernetes K8?
+
+### What are the benefits of Kubernetes K8?
 
 ## Using Docker
 ### Installing Docker
 - Download Docker from online
 - Install Docker Desktop
 - Open Docker Desktop
+
+### Docker documentation
+- `docker run -d -p 4000:4000 docs/docker.github.io`
 
 ### Docker commands
 - `docker --version` check version
@@ -21,6 +29,7 @@
 - `docker rm container_ID` delete a container
 - `docker start container_ID` start an existing container
 - `docker stop container_ID` stop a running container
+- `docker rm $(docker ps -qa)` delete all images
 
 ### Testing commands
 - `docker pull ghost`
@@ -41,3 +50,19 @@
 - `docker ps -a` to obtain container ID
 - `docker commit container_ID repo_name` to commit container
 - `docker push repo_name:tag` to push to DockerHub
+
+## Automate the build steps of nginx images
+- Create a `Dockerfile` to run a set of instructions
+- Use nginx as base image
+- Copy app1 to index.html location
+- Expose required port for base image
+- Execute nginx command
+- `docker build -t repo_name .` to build image from repo
+- `docker run -d -p 80:80 image_name`
+
+## Docker build app task
+### Docker Hub and webhook
+- Create Docker Hub repository
+- Create Google Script to send an email on responce
+- Add webhook with the Google Script to trigger on push
+
