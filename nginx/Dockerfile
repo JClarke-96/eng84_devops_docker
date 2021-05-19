@@ -1,3 +1,4 @@
+# Line 1 to 15 run base nginx
 # Use nginx official image as base
 FROM nginx
 
@@ -5,7 +6,7 @@ FROM nginx
 LABEL MAINTAINER = JClarke96
 
 # Copy app1 folder to default index.html location
-COPY app1 /usr/share/nginx/html
+COPY plane_app /usr/share/nginx/html
 
 # Expose required port for base image
 EXPOSE 80

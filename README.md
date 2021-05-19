@@ -1,14 +1,26 @@
 # Docker
 ## What is Docker?
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate applications from infrastructure so you can deliver software quickly.
+
+With Docker, you can manage infrastructure in the same ways you manage applications. By taking advantage of Docker's methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
 
 ## What are the benefits of Docker?
-
-## Differences between containerisation and virtualisation
+- Consistent and isolated environment
+- Cost-effectiveness with fast deployment
+- Repeatability and automation
+- Flexibility
 
 ## Kubernetes K8
 ### What is Kubernetes K8?
+Kubernetes is an open-source system for automating deployment, scaling, and management of containerised applications. It groups containers that make up an application into logical units for easy management and discovery.
 
 ### What are the benefits of Kubernetes K8?
+- Automation
+- Self-monitoring
+- Scalability
+
+## Differences between containerisation and virtualisation
+
 
 ## Using Docker
 ### Installing Docker
@@ -66,3 +78,26 @@
 - Create Google Script to send an email on responce
 - Add webhook with the Google Script to trigger on push
 
+### Launch the plane project app app
+- `docker pull jclarke96/plane_project`
+- `docker run -d -p 8000:8000 jclarke96/plane_project`
+- `docker push jclarke96/plane_project` push and trigger webhook
+
+## 2-tier architecture
+### Create images
+#### App
+- Copy `app` file to app directory
+- Create Dockerfile `FROM ubuntu:16.04` to `COPY app`, install dependencies, and run app
+- `docker build -t jclarke96/2tier_arch .`
+
+#### Database
+- Copy `mongod.config` file to database directory
+- Create Dockerfile `FROM mongo:3.2.20` and `COPY mongod.config`
+- `docker build -t jclarke96/2tier_arch .`
+
+### Create images and containers
+- Write `docker-compose.yml` to create images and containers
+	- Set `DB_HOST` environment variable
+	- Create app image and container
+	- Create database image and container
+- `docker compose up` to run `docker-compose.yml`
