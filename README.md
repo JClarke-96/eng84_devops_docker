@@ -101,3 +101,5 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 	- Create app image and container
 	- Create database image and container
 - `docker compose up` to run `docker-compose.yml`
+- Open `app cli` via Docker Desktop
+- `nodejs seed.js` to seed database
