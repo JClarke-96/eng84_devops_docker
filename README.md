@@ -20,7 +20,11 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 - Scalability
 
 ## Differences between containerisation and virtualisation
+Containerisation and virtualisation are two mechanisms used to host applications in a computer system. Containerisation uses containers, whereas virtualisation uses virtual machines.
 
+As virtualisation uses virtual machines, it allows the user to run multiple operating systems on the hardware of a single physical server. Containerisation enables the user to deploy multiple applications using the same operating system on a single virtual machine or server.
+
+Containerisation is more lightweight and faster to set up as it uses a single operating system to seperate different processes of an application.
 
 ## Using Docker
 ### Installing Docker
